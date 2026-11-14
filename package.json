@@ -16,7 +16,7 @@
   "exports": {
     ".": "./lib/index.js",
     "./locale/*.json": "./locale/*.json",
-    "./icon": "./icon.svg",
+    "./icon": "./assets/icon.svg",
     "./package.json": "./package.json"
   },
   "files": [
@@ -24,7 +24,6 @@
     "dict",
     "cordis.patch.yml",
     "locale/*.json",
-    "icon.svg",
     "assets",
     "README.md",
     "LICENSE",
