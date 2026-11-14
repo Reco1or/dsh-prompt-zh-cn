@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Chinese prompts",
+    "description": "Replaces DSH built-in system prompts, runtime contexts, injected messages and tool definitions with Chinese at runtime, without modifying DSH source. Uninstalling restores English."
+  }
+}

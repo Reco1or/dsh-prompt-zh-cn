@@ -1,0 +1,12 @@
+# dsh-prompt-zh-cn 组合包补丁：把中文提示词插件挂载到当前 profile。
+# profile 自身的 cordis.patch.yml 可在本行之后按 id 覆盖 config，例如关闭某一类翻译：
+#   - id: dsh-prompt-zh-cn
+#     config:
+#       tools: false
+# 需要核对覆盖率时，可临时启用诊断快照（写入首次组装结果与漏译样本）：
+#   - id: dsh-prompt-zh-cn
+#     config:
+#       diagFile: 'C:\path\to\prompt-zh-cn-dump.json'
+- insert:
+    - id: dsh-prompt-zh-cn
+      name: dsh-prompt-zh-cn
