@@ -19,6 +19,19 @@ DeepSeek Harness 中文提示词插件：在运行时把 DSH 内置的**系统�
 
 ## 安装
 
+### 从 GitHub 安装
+
+打开 **设置 → 插件 → 添加插件**，输入以下任一 spec：
+
+```text
+github:Reco1or/dsh-prompt-zh-cn
+git+https://github.com/Reco1or/dsh-prompt-zh-cn.git
+```
+
+检查后安装并启用；如果提示重启，重启 DSH。若 profile 里已经用 `link:` 装了同名包，先移除本地 bundle 再装 GitHub 版本。
+
+### 从本地目录安装（开发用）
+
 把本目录作为本地 bundle 安装：
 
 1. 打开 **设置 → 插件**；

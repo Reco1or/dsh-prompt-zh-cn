@@ -35,3 +35,9 @@ DSH 的会话有两层：
 ## 为什么不在 GUI 层也改
 
 GUI 直接渲染持久化事件；要改它就得改写会话日志或前端渲染，前者会破坏 DSH 的消息不可变性，后者需要客户端插件并依赖前端内部结构。本插件的目标是“模型看到中文”，不是“重写历史记录”，所以选择只改模型请求派生层。
+
+## 附：会话标题为什么仍是英文
+
+DSH 的会话标题由独立的 `dsh-session-title-first-prompt-llm` / `dsh-session-title-all-prompts-llm` provider 生成。它用**自己的英文 system prompt** 单独调用模型，不经过 `systemPrompt.assemble()`，也不经过本插件的 `deriveMessages()` 包装，因此本插件无法影响标题语言。
+
+标题 prompt 里虽然写了 “Use the language of the messages”，但同时给了英文示例 “such as Greeting”；模型有时会直接沿用英文，甚至把中文首条消息 “你好” 标题成 “Greeting”。这是标题 provider 的模型行为，不是本插件造成的。需要中文标题时，可在会话列表里手动重命名；或者另做一个专门改写标题 prompt 的插件。
