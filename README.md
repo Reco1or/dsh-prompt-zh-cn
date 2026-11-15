@@ -7,8 +7,7 @@ DeepSeek Harness 中文提示词插件：在运行时把 DSH 内置的**系统�
 > GUI 原始会话记录与模型实际收到的内容可能不同，原因见 [GUI 原始记录与模型侧内容的差异](#gui-原始记录与模型侧内容的差异)。
 
 > 本项目**借鉴并重构**了 [zjl1989-li/dsh-harness-zh-cn](https://github.com/zjl1989-li/dsh-harness-zh-cn)（MIT）；
-> 
-> 差异与本项目重写的部分见文末「来源与致谢」及 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md)。
+> 差异与本项目重写的部分见文末「来源与致谢」。
 
 ## 它翻译什么
 
@@ -106,9 +105,9 @@ plugin_manager({ action: "install_bundle", target: "<本目录的绝对路径>" 
 
 ## 来源与致谢
 
-本插件**借鉴并重构**了 [zjl1989-li/dsh-harness-zh-cn](https://github.com/zjl1989-li/dsh-harness-zh-cn)（MIT License，Copyright (c) 2026 dsh-harness-zh contributors）。原项目面向旧版 DSH，通过 `system-prompt/assemble` 瀑布、`commands.list` 与客户端 `locale.lookup` 做汉化；本项目针对 DSH `0.2.2-rc.3` 重新实现了运行时接入（`systemPrompt.assemble/refreshContext` + `session.deriveMessages`），并重新整理、扩充了系统提示词与工具定义词典。原项目的词典组织方式与术语（agent→代理、job→任务、session→会话、provider→提供方、fiber→纤程）给了我们重要参考。
+本插件**借鉴并重构**了 [zjl1989-li/dsh-harness-zh-cn](https://github.com/zjl1989-li/dsh-harness-zh-cn)（MIT，Copyright (c) 2026 dsh-harness-zh contributors）。原项目面向旧版 DSH，通过 `system-prompt/assemble` 瀑布、`commands.list` 与客户端 `locale.lookup` 做汉化；本项目针对 DSH `0.2.2-rc.3` 重新实现了运行时接入（`systemPrompt.assemble/refreshContext` + `session.deriveMessages`），并重新整理、扩充了系统提示词与工具定义词典。原项目的词典组织方式与术语（agent→代理、job→任务、session→会话、provider→提供方、fiber→纤程）给了我们重要参考。
 
-本插件不包含原项目的运行时代码或词典副本；如后续合并其内容，请同时保留其 MIT 版权与许可声明。完整第三方声明见 [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md)。
+本插件不包含原项目的运行时代码或词典副本。如果后续复制其代码或词典，需要同时附上原项目的 MIT 版权与许可声明。
 
 DeepSeek Harness 及其官方中文文档同样以 MIT 许可证发布；本插件的英文原文与工具 schema 取自本机安装的 DSH `0.2.2-rc.3`。
 
