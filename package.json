@@ -1,6 +1,6 @@
 {
   "name": "dsh-prompt-zh-cn",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "在运行时把 DeepSeek Harness 内置的系统提示词 sections、运行时上下文、注入消息与工具定义替换为中文，不修改任何 DSH 源码，卸载即恢复英文。",
   "repository": {
     "type": "git",
