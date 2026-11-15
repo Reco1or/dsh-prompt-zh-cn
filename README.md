@@ -1,11 +1,6 @@
 # 中文提示词（dsh-prompt-zh-cn）
 
 DeepSeek Harness 中文提示词插件：在运行时把 DSH 内置的**系统提示词 sections**、**运行时上下文**、**自动注入消息**与**工具定义**替换为中文，不修改任何 DSH 源码，卸载即恢复英文。
-
-> 中文名：**中文提示词**；包名：`dsh-prompt-zh-cn`。
->
-> GUI 原始会话记录与模型实际收到的内容可能不同，原因见 [GUI 原始记录与模型侧内容的差异](#gui-原始记录与模型侧内容的差异)。
-
 > 本项目**借鉴并重构**了 [zjl1989-li/dsh-harness-zh-cn](https://github.com/zjl1989-li/dsh-harness-zh-cn)（MIT）；
 > 差异与本项目重写的部分见文末「来源与致谢」。
 
@@ -29,33 +24,6 @@ dsh-prompt-zh-cn
 ```
 
 检查后安装并启用；如果提示重启，重启 DSH。
-
-### 从 GitHub 安装
-
-打开 **设置 → 插件 → 添加插件**，输入以下任一 spec：
-
-```text
-github:Reco1or/dsh-prompt-zh-cn
-git+https://github.com/Reco1or/dsh-prompt-zh-cn.git
-```
-
-检查后安装并启用；如果提示重启，重启 DSH。若 profile 里已经用 `link:` 装了同名包，先移除本地 bundle 再装 GitHub 版本。
-
-### 从本地目录安装（开发用）
-
-把本目录作为本地 bundle 安装：
-
-1. 打开 **设置 → 插件**；
-2. 选择 **添加插件**，指向本目录（包含 `package.json` 与 `cordis.patch.yml` 的目录）；
-3. 启用后新建会话即可生效。
-
-> 替换已安装插件的文件或修改 `dict/` 后，运行中的进程可能仍缓存旧模块；请重启 DSH 以载入新模块与词典。首次全新安装通常可直接热应用。
-
-也可以由 `plugin_manager` 安装：
-
-```text
-plugin_manager({ action: "install_bundle", target: "<本目录的绝对路径>" })
-```
 
 ## 配置
 
